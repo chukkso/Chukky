@@ -1,0 +1,26 @@
+#!/bin/bash
+echo  "The date and time are" `date` &&
+echo --------------------------------------------------------------------
+echo "lets see uptime and load" `uptime` &&
+echo
+
+ps -aux | egrep 'httpd|postfix'   
+sleep 1
+echo
+
+df -h 
+ 
+echo
+
+echo "checking website homepage"
+sleep 1
+
+curl -v http://chukkystechservices.com
+if [ $? -eq 0 ]
+then 
+ echo "site is up"
+
+else
+echo "site is down"
+fi
+
