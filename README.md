@@ -1,4 +1,4 @@
 # hellochuks
-This is chuks first test git joint.
-By the Grace of God I have been Given a full-time offer at BAH
-God has been good to me!!
+How did we live without Git!! 
+Welcome to this Test Repo as we test and familiarize ourselves with Git'N Things !!!
+This is ur Boy!!
