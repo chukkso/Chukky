@@ -4,8 +4,8 @@ PACKAGE=/tmp/package
 echo -e "Let's check for new Packages to update\n"
 yum check-update > $PACKAGE
 
-if [ -f$PACKAGE ]
-then 
+if [ -f $PACKAGE ]
+then
 echo "You have a package(s) to update"
  else
 echo " You aint got nothing to update"
