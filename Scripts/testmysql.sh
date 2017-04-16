@@ -9,5 +9,5 @@ show master status;
 show slave status;
 show processlist;
 EOF 
-
+#testing an update
 echo "All Done"
