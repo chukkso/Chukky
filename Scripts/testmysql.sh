@@ -8,6 +8,7 @@ select user,host from mysql.user;
 show master status;
 show slave status;
 show processlist;
-EOF 
+EOF
 #testing an update
+testing second update this time with git plus ;)
 echo "All Done"
