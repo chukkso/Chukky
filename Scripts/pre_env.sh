@@ -1,5 +1,5 @@
 #!/bin/bash
-echo " The locaiton of my shell command is:"
+echo " The location of my shell command is:"
 echo $SHELL
 echo "we are logged in as $LOGNAME and we are currently in $PWD and the date is/n:"
 /usr/bin/date +%F
