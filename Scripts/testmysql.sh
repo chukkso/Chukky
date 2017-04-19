@@ -5,7 +5,7 @@
 DBCOUNT=4
 
 #echo "Get listing of Databases, users and replication status" && sleep 1
-read -sp "Enter Admin user password here:" PASSWORD && sleep 2
+read -sp "Enter DB admin user password here:" PASSWORD && sleep 2
 echo
 echo "We should have $DBCOUNT DBS..Lets check and make sure that is the case" && sleep 1
 echo
