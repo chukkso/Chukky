@@ -1,0 +1,17 @@
+#!/bin/bash
+PACKAGE=/tmp/package
+
+echo -e "Let's check for new Packages to update\n"
+yum clean all &&
+yum check-update > $PACKAGE 2>&1 wait
+mail -s "Available Updates :)" chuks < /tmp/packages
+
+<<<<<<< HEAD:check4packages
+=======
+if [ -f $PACKAGE ]
+then
+echo "You have a package(s) to update"
+ else
+echo " You aint got nothing to update"
+fi
+>>>>>>> 8104666d76cdaa0a041a493836eb35047a239215:Scripts/check4packages

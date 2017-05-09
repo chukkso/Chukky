@@ -1,0 +1,12 @@
+#!/bin/bash
+servicenumber=`/usr/bin/ps aux |grep httpd |grep -v grep | wc -l`
+echo "$servicenumber httpd service is running\n" 
+echo "\nwho is logged in now?\n" 
+/usr/bin/w 
+BLUE="\033[0;34m"
+RESET="\033[0m"
+
+echo $'\nThis tool creates a cloned channel on Satellite of parent and all child
+channels.\n\nMust be run with\033[1;31m root\033[0m access on the Satellite server.\n'
+
+
