@@ -1,6 +1,6 @@
 #!/bin/bash
 echo  "The date and time are" `date` &&
-echo --------------------------------------------------------------------
+echo  =============================
 echo "lets see uptime and load" `uptime` &&
 echo
 
@@ -13,6 +13,7 @@ df -h
 echo
 
 echo "checking website homepage"
+echo  =========================
 sleep 1
 
 curl -v http://chukkystechservices.com
@@ -21,6 +22,8 @@ then
  echo "site is up"
 
 else
-echo "site is down"
+echo "site is down..Restarting Apache" 
+sleep .25
+systemctl start httpd
 fi
 

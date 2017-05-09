@@ -2,11 +2,7 @@
 PACKAGE=/tmp/package
 
 echo -e "Let's check for new Packages to update\n"
-yum check-update > $PACKAGE
+yum clean all &&
+yum check-update > $PACKAGE 2>&1 wait
+mail -s "Available Updates :)" chuks < /tmp/packages
 
-if [ -f$PACKAGE ]
-then 
-echo "You have a package(s) to update"
- else
-echo " You aint got nothing to update"
-fi
