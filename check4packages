@@ -1,0 +1,12 @@
+#!/bin/bash
+PACKAGE=/tmp/package
+
+echo -e "Let's check for new Packages to update\n"
+yum clean all 
+wait
+yum update --assumeno &> $PACKAGE
+wait
+mail -s "Available Updates :)" chuks < /tmp/package
+wait
+#rm -rf /tmp/package
+

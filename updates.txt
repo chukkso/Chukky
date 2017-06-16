@@ -1,0 +1,17 @@
+Loaded plugins: fastestmirror
+Determining fastest mirrors
+ * base: mirror.es.its.nyu.edu
+ * epel: fedora-epel.mirrors.tds.net
+ * extras: mirrors.greenmountainaccess.net
+ * updates: mirrors.advancedhosters.com
+
+bind-libs.x86_64                       32:9.9.4-38.el7_3.3               updates
+bind-libs-lite.x86_64                  32:9.9.4-38.el7_3.3               updates
+bind-license.noarch                    32:9.9.4-38.el7_3.3               updates
+bind-utils.x86_64                      32:9.9.4-38.el7_3.3               updates
+device-mapper.x86_64                   7:1.02.135-1.el7_3.4              updates
+device-mapper-libs.x86_64              7:1.02.135-1.el7_3.4              updates
+nss.x86_64                             3.28.4-1.0.el7_3                  updates
+nss-sysinit.x86_64                     3.28.4-1.0.el7_3                  updates
+nss-tools.x86_64                       3.28.4-1.0.el7_3                  updates
+nss-util.x86_64                        3.28.4-1.0.el7_3                  updates

@@ -12,9 +12,9 @@ df -h
  
 echo
 
-echo "checking website homepage"
+echo "Checking Website Homepage"
 echo  =========================
-sleep 1
+wait
 
 curl -v http://chukkystechservices.com
 if [ $? -eq 0 ]
@@ -23,7 +23,7 @@ then
 
 else
 echo "site is down..Restarting Apache" 
-sleep .25
+wait
 systemctl start httpd
 fi
 
