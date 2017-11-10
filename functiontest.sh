@@ -10,10 +10,11 @@ echo
 ls -lth
 ===========
 echo
-ps aux  
+ps aux
 sleep 2
 curl -v chukkystechservices.com
 ===============================================
-ls -l $INTERESTEDDIR
+ls -lth $INTERESTEDDIR
 }
+df -h
 whatsup
