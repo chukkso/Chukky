@@ -1,0 +1,11 @@
+**IP Mapper for home network**
+
+---
+10.0.0.1  - Gateway
+.02 wifi- chukky-pi
+.03 ether - chukky-pi
+.04 - amcrest ?
+.05 -
+.06 - amcrest - ether
+.08 - Chukky-Desktop
+.130 - wifi -printer ? to make static
