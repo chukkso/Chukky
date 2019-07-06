@@ -56,3 +56,13 @@ alias dft='df -Tha --total'
 alias du='du -chs'
 alias free='free -h'
 alis sslgen='openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes'
+
+#Functions
+#to log into linux academy 
+la () {
+if [ $# = 0 ] ; then
+  echo "Usage: enter (ip to ssh into)"
+fi
+return 1
+ssh -v cloud_user@$1
+}
