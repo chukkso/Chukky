@@ -64,5 +64,5 @@ if [ -z "$1" ] ; then
    echo "Usage: enter ip"
    return 1
 fi
-ssh -v cloud_user@"$1"
+ssh cloud_user@"$1"
 }
