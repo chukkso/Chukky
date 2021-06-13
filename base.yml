@@ -1,0 +1,42 @@
+# inital server setup
+---
+  - hosts: centos:ubuntu:master
+    become: true
+    vars:
+      packages:
+        - tree
+        - git
+        - htop
+          #- net-snmp
+        - youtube-dl 
+      admins:
+        - localadmin
+        - rundeckadmin
+    gather_facts: false
+
+    tasks: 
+      - name: install packages
+        package:
+          name: "{{ packages }}"
+          state: latest
+        tags: packages
+
+      - name: install base users
+        user:
+          name: "{{ item }}"
+          state: present
+          #append: yes
+          #groups: sudo
+          shell: "/bin/bash"
+        with_items:
+          - localadmin
+          - rundeckadmin
+        tags: users 
+           #- tasks:
+           #- name: update MOTD
+
+      - name: clone chuks repo
+        git:
+          repo: https://github.com/chukkso/Chukky.git
+          dest: /home/ansible/Chukky
+        tags: getrepo
