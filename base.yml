@@ -3,16 +3,18 @@
   - hosts: centos:ubuntu:master
     become: true
     vars:
-      packages:
+      centospackages:
         - tree
         - git
         - htop
-          #- net-snmp
+        - net-snmp
         - youtube-dl 
+      ubuntupackages:
+        - snmpd      
       admins:
         - localadmin
         - rundeckadmin
-    gather_facts: false
+    gather_facts: true
 
     tasks: 
       - name: install packages
@@ -20,6 +22,13 @@
           name: "{{ packages }}"
           state: latest
         tags: packages
+    tasks:
+      - name: install ubuntu specific named packages
+        package:
+          name: "{{ ubuntupackages }}"
+          state: latest
+        tags: ubuntupackages
+        when : ansible_distribution == "Ubuntu"
 
       - name: install base users
         user:
