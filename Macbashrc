@@ -66,3 +66,13 @@ if [ -z "$1" ] ; then
 fi
 ssh cloud_user@"$1"
 }
+
+## login using sshpass from password in a file (.secure) in homedir ##
+function en() {
+if [ -z "$1" ] ; then
+  echo "Usage: enter ip"
+  return 1
+fi
+sshpass -f .secure ssh -o stricthostkeychecking=no username@"$1"
+}
+
