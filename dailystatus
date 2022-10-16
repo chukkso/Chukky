@@ -16,7 +16,7 @@ echo "Checking Website Homepage"
 echo  =========================
 wait
 
-curl -v http://chukkystechservices.com
+curl -v https://bumicah.com
 if [ $? -eq 0 ]
 then 
  echo "site is up"
