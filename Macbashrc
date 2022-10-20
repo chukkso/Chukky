@@ -76,3 +76,10 @@ fi
 sshpass -f .secure ssh -o stricthostkeychecking=no username@"$1"
 }
 
+function precheck() {
+if [ -z "$1" ] ; then
+  echo "Usage: enter ip"
+  return 1
+fi
+sshpass -f .secure ssh -o stricthostkeychecking=no -v ibmcokonkwo@"$1" 'bash -s' < os_validation_WSL.sh
+}
