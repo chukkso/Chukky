@@ -22,7 +22,7 @@
           name: "{{ packages }}"
           state: latest
         tags: packages
-    tasks:
+    
       - name: install ubuntu specific named packages
         package:
           name: "{{ ubuntupackages }}"
